@@ -1,0 +1,49 @@
+.ag-theme-alpine {
+  --ag-header-column-separator-display: block;
+  --ag-header-column-separator-height: 100%;
+  --ag-header-column-separator-width: 1px;
+  --ag-header-column-separator-color: black;
+
+  --ag-header-column-resize-handle-display: none;
+  --ag-header-column-resize-handle-height: 0%;
+  --ag-header-column-resize-handle-width: 0px;
+  --ag-header-column-resize-handle-color: transparent;
+
+  --ag-row-border-style: solid;
+  --ag-row-border-width: 1px;
+  --ag-row-border-color: #292929;
+}
+
+.ag-grid-header-font-size {
+  font-size: 12px;
+}
+
+Subgrid {
+  display: flex;
+  flex-direction: column;
+}
+
+.segmentview-cell {
+  background: #ade2ff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.sub-grid-cell {
+  padding: 0px;
+  border: 1px solid #000;
+  /* background: rgba(128, 255, 177, 0.836); */
+}
+
+subgrid label {
+  border-bottom: 1px solid #000;
+  border-width: 100%;
+  font-size: 10px;
+  font-weight: bold;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.cell-border {
+  border: 1px solid #000;
+}
