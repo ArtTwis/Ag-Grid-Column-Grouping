@@ -10,7 +10,7 @@ export const dummyData = [
     rollingMarketGrowth: 100,
     rollingHpGrowth: 200,
     rollingHpGrowth2: 200,
-    mS: 20,
+    mS: { canon: 'CANON', epson: 'ESPON', hp: 'HP', market: 'MARKET' },
     q2: { canon: 20, epson: 25, hp: 30, market: 35 },
     q3: { canon: 20, epson: -25, hp: 0, market: 35 },
     oct22: { canon: 20, epson: 25, hp: -30, market: 35 },

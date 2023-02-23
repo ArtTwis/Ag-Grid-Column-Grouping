@@ -20,8 +20,19 @@ const subGridCellStyling2 = (param, key) => {
   };
 };
 
+const subGrid = (param) => {
+  param = param.value;
+  return (
+    <div className='subgrid'>
+      {Object.keys(param).map((key) => (
+        <label>{param[key]}</label>
+      ))}
+    </div>
+  );
+};
+
 const subgrid = (param) => (
-  <subgrid>
+  <div className='subgrid'>
     <label style={subGridCellStyling(param, 'canon')}>
       {param.value.canon}%
     </label>
@@ -32,11 +43,11 @@ const subgrid = (param) => (
     <label style={subGridCellStyling(param, 'market')}>
       {param.value.market}%
     </label>
-  </subgrid>
+  </div>
 );
 
 const subgrid2 = (param) => (
-  <subgrid>
+  <div className='subgrid'>
     <label style={subGridCellStyling2(param, 'brother')}>
       {param.value.brother}
     </label>
@@ -45,7 +56,7 @@ const subgrid2 = (param) => (
     </label>
     <label style={subGridCellStyling2(param, 'hp')}>{param.value.hp}</label>
     <label style={subGridCellStyling2(param, 'mean')}>{param.value.mean}</label>
-  </subgrid>
+  </div>
 );
 
 export const columnData = [
@@ -194,14 +205,7 @@ export const columnData = [
             headerName: 'MS%',
             field: 'mS',
             cellClass: 'sub-grid-cell',
-            cellRenderer: (param) => (
-              <subgrid>
-                <label>CANON</label>
-                <label>EPSON</label>
-                <label>HP</label>
-                <label>MARKET YoY</label>
-              </subgrid>
-            ),
+            cellRenderer: subGrid,
             width: 75,
           },
           {
@@ -303,12 +307,12 @@ export const columnData = [
             width: 100,
             cellClass: 'sub-grid-cell',
             cellRenderer: (param) => (
-              <subgrid>
+              <div className='subgrid'>
                 <label>BROTHER</label>
                 <label>EPSON</label>
                 <label>HP</label>
                 <label>MEAN</label>
-              </subgrid>
+              </div>
             ),
           },
           {
